@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
-import AuthService from './AuthService';
+
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
@@ -8,7 +8,7 @@ const LoginScreen = ({ navigation }) => {
 
   const handleLogin = async () => {
     try {
-        const response = await fetch(`/auth/login`, {
+        const response = await fetch(`http://localhost:5000/auth/login`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

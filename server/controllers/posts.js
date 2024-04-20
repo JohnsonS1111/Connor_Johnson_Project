@@ -30,13 +30,6 @@ export const createPost = async(req, res) => {
 export const getFeedPosts = async(req, res) => {
     try {
 
-        
-
-
-
-
-
-        
         const post = await Post.find();
         res.status(201).json(post);
     }
@@ -58,7 +51,7 @@ export const getUserPosts = async(req, res) => {
     }
 }
 
-export const likePost = async(req, res) => {
+export const likePosts = async(req, res) => {
     try {
         const{id} = req.params;
         const {userId} = req.body;
